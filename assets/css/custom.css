@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+
+#header h1 {
+	color: #0d0030;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 0px;
+}
+
+#header h2 {
+	color: #0d0030;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 0.9em;
+	font-weight: 400;
+}
+
+body {
+	background-color: #f7f7f7;
+}
+
+.topic {
+	color: #0d0030;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+/* Color Boxes */
+
+	#tipName {
+		color: #fff;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 700;
+		font-size: 1.5em;
+		z-index: 1;
+		position: absolute;
+		display: table;
+		bottom: 0;
+		padding-left: 25px;
+		text-transform: uppercase;
+	}
+
+	#tipHex {
+		color: #fff;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 400;
+		font-size: 1.25em;
+		z-index: 1;
+		position: absolute;
+		display: table;
+		bottom: 0;
+		padding-left: 25px;
+		padding-bottom: 35px;
+	}
+
+	#color {
+		background: #000;
+		position: relative;
+		border-radius: 0.75em;
+		display: inline-block;
+		padding-bottom:50%;
+	}
+
+	.heart2 {
+		position: relative;
+		right: 0;
+		top: 0;
+		width: 100%;
+		font-family: 'FontAwesome';
+		font-size: 1.25em;
+		border: 0!important;
+	}
+
+	.colorbox {
+		border-radius: 0.75em;
+		border: 0;
+		display: inline-block;
+		background-color: #0d0030;
+		height: 0;
+		padding-bottom: 66.66667%;
+		position: relative;
+	}
+
+		.colorbox:before {
+			-moz-transition: opacity 0.2s ease-in-out;
+			-webkit-transition: opacity 0.2s ease-in-out;
+			-ms-transition: opacity 0.2s ease-in-out;
+			transition: opacity 0.2s ease-in-out;
+			background: url("images/overlay.png");
+			border-radius: 0.75em;
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			opacity: 0.1;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.colorbox.left {
+			float: left;
+			margin: 0 1.5em 1em 0;
+			top: 0.25em;
+		}
+
+		.colorbox.right {
+			float: right;
+			margin: 0 0 1em 1.5em;
+			top: 0.25em;
+		}
+
+		.colorbox.left, .colorbox.right {
+			max-width: 40%;
+		}
+
+			.colorbox.left img, .colorbox.right img {
+				width: 100%;
+			}
+
+		.colorbox.fit {
+			display: block;
+			margin: 0 0 2em 0;
+			width: 100%;
+		}
+
+		.colorbox.avatar {
+			border-radius: 100%;
+		}
+
+			.colorbox.avatar:before {
+				display: none;
+			}
+
+			.colorbox.avatar img {
+				border-radius: 100%;
+				width: 100%;
+			}
+
+
+.heart {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  
+}
+
+.heart-active {
+  background-position: -2800px 0;
+  transition: background 1s steps(28);
+}
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2800px 0;
+  }
+}
