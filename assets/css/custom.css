@@ -1,8 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa);
 
 #header h1 {
 	color: #0d0030;
-	font-family: 'Fredoka One', sans-serif;
+	font-family: 'Comfortaa', sans-serif;
 	font-size: 1.5em;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -22,7 +22,7 @@ body {
 
 .topic {
 	color: #0d0030;
-	font-family: 'Fredoka One', sans-serif;
+	font-family: 'Comfortaa', sans-serif;
 	font-size: 1em;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -47,13 +47,14 @@ body {
 		color: #fff;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 400;
-		font-size: 1.25em;
+		font-size: 1em;
 		z-index: 1;
 		position: absolute;
 		display: table;
 		bottom: 0;
 		padding-left: 25px;
 		padding-bottom: 35px;
+		text-transform: lowercase;
 	}
 
 	#color {
@@ -78,7 +79,7 @@ body {
 		border-radius: 0.75em;
 		border: 0;
 		display: inline-block;
-		background-color: #0d0030;
+		background-color: #000;
 		height: 0;
 		padding-bottom: 66.66667%;
 		position: relative;

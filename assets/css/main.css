@@ -2498,7 +2498,7 @@
 	#footer {
 		bottom: 0;
 		left: 0;
-		padding: 0 0em 6em 0;
+		padding: 0 0em 4em 0;
 		position: fixed;
 		text-align: center;
 		width: 25%;
@@ -2514,16 +2514,16 @@
 
 		#footer .copyright {
 			color: rgba(13, 1, 47, 0.8);
-			font-size: 1em;
+			font-size: 0.25em;
 			list-style: none;
-			margin: 1em 0 0 0;
+			margin: 2em 0 0 0;
 			padding: 0;
 		}
 
 			#footer .copyright li {
 				border-left: solid 1px rgba(255, 255, 255, 0.25);
 				display: inline-block;
-				line-height: 1em;
+				line-height: 0.25em;
 				margin-left: 0.75em;
 				padding-left: 0.75em;
 			}
@@ -3099,3 +3099,359 @@
 			}
 
 	}
+
+
+	/* Badass Flip */
+
+	.flip {
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    margin: 3% 5%;
+    font-size: .8em
+}
+.flip::before {
+    display: block;
+    margin-top: 100%;
+    content: ''
+}
+.flip.totop-link svg {
+    fill: #666;
+    -moz-transition: fill 200ms ease-in-out;
+    -o-transition: fill 200ms ease-in-out;
+    -webkit-transition: fill 200ms ease-in-out;
+    transition: fill 200ms ease-in-out
+}
+.flip.totop-link:hover svg,
+.flip.totop-link:focus svg {
+    fill: #BADA55
+}
+.flip .flip-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+.flip .card-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: center no-repeat;
+    background-size: cover;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-weight: 700;
+    text-align: center
+}
+.flip .face-front .inner {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    text-align: right
+}
+.flip .face-front .card-title,
+.flip .face-front .card-subtitle {
+    margin: 0;
+    font-weight: 700;
+    line-height: .8em;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.4)
+}
+.flip .face-front .card-title {
+    font-size: 1.25em
+}
+.flip .face-front .card-subtitle {
+    font-size: 3em
+}
+.flip .face-front .plus,
+.flip .face-front .arrow {
+    position: absolute;
+    top: calc(50% - .5em);
+    left: 0;
+    right: 0;
+    font-family: arial, sans-serif;
+    font-size: 10em;
+    line-height: 1em;
+    font-weight: normal;
+    text-align: center
+}
+.flip .face-front .arrow {
+    font-size: 6em
+}
+.flip .face-front .arrow svg {
+    width: 1em;
+    height: 1em
+}
+.flip .face-front .text {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    font-family: 'Source Sans', sans-serif;
+    font-size: .875em;
+    line-height: 1.5em;
+    font-weight: normal;
+    color: #999;
+    text-align: left;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+.flip .face-front .text strong {
+    font-weight: normal;
+    color: #BADA55
+}
+.flip .face-front .text a {
+    color: #ccc
+}
+.flip .face-front .text a:hover,
+.flip .face-front .text a:focus {
+    color: #BADA55
+}
+.flip .face-front .text.credits {
+    font-size: .8125em;
+    color: #808080
+}
+.flip .face-front .text.credits a {
+    color: #aaa
+}
+.flip .face-front .text.credits a:hover,
+.flip .face-front .text.credits a:focus {
+    color: #BADA55
+}
+.flip .face-back .inner {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    overflow: hidden;
+    background-image: -ms-linear-gradient(top left, transparent 0%, transparent 8%, rgba(136, 136, 136, 0.9) 8.1%, rgba(136, 136, 136, 0.9) 100%);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuMCIgeDI9IjEuMCIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjglIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iOC4xJSIgc3RvcC1jb2xvcj0iIzg4ODg4OCIgc3RvcC1vcGFjaXR5PSIwLjkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4ODg4ODgiIHN0b3Atb3BhY2l0eT0iMC45Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(8%, rgba(0, 0, 0, 0)), color-stop(8.1%, rgba(136, 136, 136, 0.9)), color-stop(100%, rgba(136, 136, 136, 0.9)));
+    background-image: -moz-linear-gradient(top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 8%, rgba(136, 136, 136, 0.9) 8.1%, rgba(136, 136, 136, 0.9) 100%);
+    background-image: -webkit-linear-gradient(top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 8%, rgba(136, 136, 136, 0.9) 8.1%, rgba(136, 136, 136, 0.9) 100%);
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 8%, rgba(136, 136, 136, 0.9) 8.1%, rgba(136, 136, 136, 0.9) 100%)
+}
+.flip .face-back .btn-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 17%;
+    height: 17%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: none;
+    text-align: left
+}
+.flip .face-back .btn-back svg {
+    position: absolute;
+    top: 28%;
+    left: 28%;
+    width: 1em;
+    height: 1em;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    fill: rgba(136, 136, 136, 0.9);
+    -moz-transition: fill 200ms ease-in-out;
+    -o-transition: fill 200ms ease-in-out;
+    -webkit-transition: fill 200ms ease-in-out;
+    transition: fill 200ms ease-in-out
+}
+.flip .face-back .btn-back:hover svg,
+.flip .face-back .btn-back:focus svg {
+    fill: #fff
+}
+.flip .face-back .btn-rate {
+    display: inline-block;
+    width: 33.75%;
+    height: 39.375%;
+    margin-top: 10%;
+    border: 0;
+    outline: 0;
+    background: none
+}
+.flip .face-back .btn-rate svg {
+    width: 100%;
+    height: 100%
+}
+.flip .face-back .btn-rate .rate-stroke {
+    fill: #fff
+}
+.flip .face-back .btn-rate .rate-background,
+.flip .face-back .btn-rate .rate-rated {
+    fill: transparent;
+    -moz-transition: fill 200ms ease-in-out;
+    -o-transition: fill 200ms ease-in-out;
+    -webkit-transition: fill 200ms ease-in-out;
+    transition: fill 200ms ease-in-out
+}
+.flip .face-back .btn-rate:not(.rated):hover .rate-background,
+.flip .face-back .btn-rate:not(.rated):focus .rate-background {
+    fill: #fff
+}
+.flip .face-back .btn-rate.rated {
+    cursor: inherit;
+    pointer-events: none
+}
+.flip .face-back .btn-rate.rated .rate-rated {
+    fill: #fff
+}
+.flip .face-back .color-link {
+    display: inline-block;
+    margin-top: 10%;
+    border-bottom: .1em solid transparent;
+    font-size: 1.625em;
+    line-height: 1.2em;
+    color: rgba(255, 255, 255, 0.5)
+}
+.flip .face-back .color-link:hover,
+.flip .face-back .color-link:focus {
+    color: #fff
+}
+.flip .face-back .color-link b {
+    color: #fff
+}
+.flip .face-back footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(85, 85, 85, 0.9);
+    text-align: center
+}
+.flip .face-back footer:hover a {
+    opacity: .4
+}
+.flip .face-back footer a {
+    display: inline-block;
+    width: 25%;
+    height: 1.5em;
+    padding: 4% 0;
+    vertical-align: middle;
+    opacity: 1;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out
+}
+.flip .face-back footer a:hover,
+.flip .face-back footer a:focus {
+    opacity: 1
+}
+.flip .face-back footer svg {
+    width: 1.5em;
+    height: 1.5em;
+    fill: #fff
+}
+.flip .face-back form h1 {
+    margin: 0;
+    padding: 5% 0;
+    font-size: 1.5em;
+    text-transform: uppercase
+}
+.flip .face-back form label {
+    display: block;
+    height: 14%;
+    margin: 3%;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: rgba(111, 111, 111, 0.9);
+    font-weight: 300;
+    white-space: nowrap;
+    line-height: 1em
+}
+.flip .face-back form label[for='i4'] {
+    display: none
+}
+.flip .face-back form label div {
+    position: relative;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+.flip .face-back form span {
+    display: inline-block;
+    width: 20%;
+    height: 1em;
+    padding: 0;
+    font-family: 'Source Sans', sans-serif;
+    text-align: right;
+    vertical-align: baseline
+}
+.flip .face-back form input {
+    display: inline-block;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    background: none;
+    font-family: 'Source Sans', sans-serif;
+    line-height: 1em;
+    vertical-align: baseline
+}
+.flip .face-back form input[id='i1'],
+.flip .face-back form input[id='i2'] {
+    text-transform: uppercase
+}
+.flip .face-back form button {
+    display: block;
+    width: 94%;
+    height: 14%;
+    margin: 3%;
+    padding: .2em 0;
+    border: 0;
+    outline: 0;
+    background: rgba(85, 85, 85, 0.9);
+    font-size: 1.25em;
+    line-height: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center
+}
+.flip .face-back form button:hover,
+.flip .face-back form button:focus {
+    background: rgba(60, 60, 60, 0.9)
+}
+.flip .face-back form .respond {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    right: -5%;
+    bottom: -5%;
+    z-index: 0;
+    display: none;
+    background: #ccc
+}
+.flip .face-back form .respond div {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    font-size: 1em;
+    color: #111;
+    text-align: center;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+.flip .face-back form .respond img {
+    width: 20%;
+    height: 20%;
+    -webkit-animation: load 800ms linear infinite;
+    animation: load 800ms linear infinite
+}
